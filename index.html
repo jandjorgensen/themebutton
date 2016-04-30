@@ -1,10 +1,29 @@
 <html>
 <head>
 	<title>The One Where People Clap Every Time</title>
+	<style>
+		.button {
+			width: 100%;
+			overflow: hidden;
+		}
+		.button img {
+			width: 200%;
+			position: absolute;
+			right: -100%;
+		}
+		.button img:active {
+			right: 0;
+		}
+		#song {
+			visibility: hidden;
+		}
+	</style>
 </head>
 <body>
 <h1>The One Where People Clap Every Time</h1>
-<img id="button" src="./button.png" onclick="document.getElementById('song').play()" />
+<div class="button">
+	<img src="./button.png" onclick="document.getElementById('song').play()" />
+</div>
 <audio id="song" style="visibility:hidden;" src="friends.mp3" preload="auto" controls></audio>
 </body>
 </html>
